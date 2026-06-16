@@ -7,6 +7,9 @@
     "dev": "concurrently -n vite,api -c cyan,green \"vite\" \"tsx watch server/index.ts\"",
     "build:skill": "tsx scripts/build-skill.ts",
     "build": "npm run build:skill && tsc -b && vite build",
+    "verify": "tsx scripts/verify-parity.ts && tsc -b",
+    "verify:update": "tsx scripts/verify-parity.ts --update",
+    "token-report": "tsx scripts/token-report.ts",
     "preview": "vite preview",
     "server": "tsx server/index.ts"
   },
